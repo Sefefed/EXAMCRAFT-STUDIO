@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.quizmasterfx.controller.ResultsController">
+    <children>
+        <BorderPane>
+            <center>
+                <VBox spacing="10" alignment="CENTER" styleClass="content">
+                    <children>
+                        <Label fx:id="titleLabel" styleClass="title"/>
+                        <Label fx:id="scoreLabel" styleClass="bigscore"/>
+                        <Label fx:id="timeLabel"/>
+                        <HBox spacing="10">
+                            <children>
+                                <Button fx:id="reviewBtn" text="Review Answers"/>
+                                <Button fx:id="backBtn" text="Back to Portal"/>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                </VBox>
+            </center>
+        </BorderPane>
+        <AnchorPane fx:id="confettiPane" pickOnBounds="false"/>
+    </children>
+</StackPane>

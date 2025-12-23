@@ -1,0 +1,20 @@
+{
+  // Point VS Code Java extension to JavaFX SDK jars so FXML/Stage/Parent resolve
+  // Explicitly list core JavaFX 17 jars for reliable indexing
+  "java.project.referencedLibraries": [
+    "C:/java/javafx-sdk-17.0.17/lib/javafx-base-17.0.17.jar",
+    "C:/java/javafx-sdk-17.0.17/lib/javafx-graphics-17.0.17.jar",
+    "C:/java/javafx-sdk-17.0.17/lib/javafx-controls-17.0.17.jar",
+    "C:/java/javafx-sdk-17.0.17/lib/javafx-fxml-17.0.17.jar"
+  ],
+  // Optional: enable auto-build on save for quick error feedback
+  "java.autobuild.enabled": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17",
+      "default": true
+    }
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
+}

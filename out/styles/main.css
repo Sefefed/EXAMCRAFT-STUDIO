@@ -1,0 +1,53 @@
+/* Base theme */
+.title {
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+}
+
+.bigscore {
+  -fx-font-size: 28px;
+  -fx-font-weight: 800;
+}
+
+.section {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+}
+
+.sidebar {
+  -fx-background-color: linear-gradient(to bottom, #f8f9fb, #eef1f6);
+  -fx-border-width: 0 1 0 0;
+  -fx-border-color: #dcdfe4;
+}
+
+.content {
+  -fx-background-color: white;
+}
+
+.topbar {
+  -fx-background-color: linear-gradient(to right, #ffffff, #f3f7ff);
+  -fx-border-width: 0 0 1 0;
+  -fx-border-color: #e5e8ef;
+}
+
+.question {
+  -fx-font-size: 18px;
+}
+
+.timer {
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+}
+
+/* Buttons */
+Button {
+  -fx-background-color: #2363eb;
+  -fx-text-fill: white;
+  -fx-background-radius: 6;
+}
+Button:hover {
+  -fx-background-color: #1f55c8;
+}
+Button:disabled {
+  -fx-opacity: 0.6;
+}

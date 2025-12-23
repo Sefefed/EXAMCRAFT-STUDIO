@@ -1,0 +1,39 @@
+plugins {
+    id 'application'
+}
+
+group = 'com.quizmasterfx'
+version = '0.1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JavaFX (Windows classifiers). If on Mac/Linux, change ':win' to ':mac' or ':linux'.
+    implementation "org.openjfx:javafx-controls:21.0.4:win"
+    implementation "org.openjfx:javafx-fxml:21.0.4:win"
+
+    // JSON (optional persistence)
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    // Annotations (optional)
+    compileOnly 'org.jetbrains:annotations:24.1.0'
+}
+
+application {
+    mainClass = 'com.quizmasterfx.Main'
+}
+
+tasks.withType(JavaExec).configureEach {
+    // Ensures JavaFX native libs are available at runtime
+    jvmArgs += [
+        '--add-opens=javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED',
+        '--add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED'
+    ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.FlowPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.quizmasterfx.controller.QuizController">
+    <top>
+        <HBox spacing="18" styleClass="topbar">
+            <children>
+                <Label fx:id="quizTitleLabel" text="QUIZ:" styleClass="title"/>
+                <HBox spacing="8" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Time:"/>
+                        <Label fx:id="timerLabel" text="30:00" styleClass="timer"/>
+                    </children>
+                </HBox>
+            </children>
+            <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="12" styleClass="content">
+            <children>
+                <ProgressBar fx:id="progressBar" prefWidth="900"/>
+                <Label fx:id="questionText" wrapText="true" styleClass="question"/>
+                <VBox fx:id="answersBox" spacing="8"/>
+                <HBox spacing="10">
+                    <children>
+                        <Button fx:id="prevBtn" text="← Prev"/>
+                        <Button fx:id="flagBtn" text="Flag 🚩" disable="true"/>
+                        <Button fx:id="nextBtn" text="Next →"/>
+                    </children>
+                </HBox>
+                <TitledPane text="Questions" expanded="true">
+                    <content>
+                        <FlowPane fx:id="bubbleContainer" hgap="8" vgap="8"/>
+                    </content>
+                </TitledPane>
+            </children>
+            <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch QuizMasterFX",
+      "request": "launch",
+      "mainClass": "com.quizmasterfx.Main",
+      "projectName": "QuizMasterFX"
+    },
+    {
+      "type": "java",
+      "name": "Launch (Local JavaFX SDK)",
+      "request": "launch",
+      "mainClass": "com.quizmasterfx.Main",
+      "vmArgs": "--module-path \"C:\\java\\javafx-sdk-17.0.17\\lib\" --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}

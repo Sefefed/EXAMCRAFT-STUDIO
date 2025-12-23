@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="build/resources/test" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/resources/main" path="src/main/resources">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="build/generated/sources/annotationProcessor/java/test">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="build/generated/sources/annotationProcessor/java/main">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.27.0/91b2c29d8a6148b5e2e4930f070d4840e2e48e34/error_prone_annotations-2.27.0.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.27.0/ddd5b55fab865b04b0b1f0ce66eea0d07a16a4c8/error_prone_annotations-2.27.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.errorprone"/>
+			<attribute name="artifactId" value="error_prone_annotations"/>
+			<attribute name="version" value="2.27.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/21.0.4/f95765a30335b7be0f383d4054c506c53604029e/javafx-fxml-21.0.4-win.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/21.0.4/72019e5ca6a68ed1f2c34bdc1c41cebdcd7ecc79/javafx-fxml-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-fxml"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.4/3356b78424f533db404511d033a01ecdf9648314/javafx-graphics-21.0.4.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.4/67f959474ae53c88a2b482ebc67f8bdb0f7d825d/javafx-graphics-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-graphics"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21.0.4/f0db23b6bd9a7cb582beb0333bf515f0206616f1/javafx-controls-21.0.4.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21.0.4/54d34df3c28fe2d2141bd8965a6dc9ce24a41cb0/javafx-controls-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-controls"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.11.0/527175ca6d81050b53bdd4c457a6d6e017626b0e/gson-2.11.0.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.11.0/bbd772a8634d3d6fea7ffea693535a4bd1c773c0/gson-2.11.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.code.gson"/>
+			<attribute name="artifactId" value="gson"/>
+			<attribute name="version" value="2.11.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/24.1.0/7af6a669488450c4a07c2c3254e2151df42d7d04/annotations-24.1.0.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/24.1.0/d90a405211798b013b8ee3d54f70edc0913a28b0/annotations-24.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jetbrains"/>
+			<attribute name="artifactId" value="annotations"/>
+			<attribute name="version" value="24.1.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21.0.4/3e23b650bfe471a27d87f0e3204c0ffc55a4eecc/javafx-controls-21.0.4-win.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21.0.4/54d34df3c28fe2d2141bd8965a6dc9ce24a41cb0/javafx-controls-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-controls"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.4/271c054dbb4829a7626addf1d9f0a26edfb23b32/javafx-base-21.0.4.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.4/18fd6a56249c960a3b7afc5b89f84dc6d95b3e44/javafx-base-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-base"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="out"/>
+</classpath>
