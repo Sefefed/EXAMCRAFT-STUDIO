@@ -17,6 +17,9 @@ fi
 JFX_ZIP="$JFX_BASE/openjfx-${JFX_VER}_windows-x64_bin-sdk.zip"
 JFX_URL="https://download2.gluonhq.com/openjfx/${JFX_VER}/openjfx-${JFX_VER}_windows-x64_bin-sdk.zip"
 JFX_WIN_DIR="$JFX_BASE/win-jars"
+GSON_DIR="$JFX_BASE/libs"
+GSON_JAR="$GSON_DIR/gson-2.10.1.jar"
+GSON_URL="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar"
 
 mkdir -p "$JFX_BASE"
 
@@ -42,7 +45,17 @@ mkdir -p "$OUT_DIR"
 
 echo "[3/4] Compiling sources ..."
 find "src/main/java" -name "*.java" -print0 | xargs -0 -I{} printf '"%s"\n' "{}" > "$OUT_DIR/sources.txt"
-javac -d "$OUT_DIR" --module-path "$JFX_DIR/lib" --add-modules javafx.controls,javafx.fxml @"$OUT_DIR/sources.txt"
+mkdir -p "$GSON_DIR"
+if [ ! -f "$GSON_JAR" ]; then
+  echo "[~] Downloading Gson ..."
+  if command -v curl >/dev/null 2>&1; then
+    curl -L -o "$GSON_JAR" "$GSON_URL"
+  else
+    powershell -NoProfile -Command "Invoke-WebRequest -Uri '$GSON_URL' -OutFile '$GSON_JAR'"
+  fi
+fi
+
+javac -cp "$GSON_JAR" -d "$OUT_DIR" --module-path "$JFX_DIR/lib" --add-modules javafx.controls,javafx.fxml @"$OUT_DIR/sources.txt"
 
 echo "[3.5/4] Copying resources ..."
 if [ -d "src/main/resources" ]; then
@@ -60,6 +73,7 @@ curl -L -o "$JFX_WIN_DIR/javafx-fxml-$JFX_VER-win.jar"     "$BASE_MVN/javafx-fxm
 
 export PATH="$JFX_DIR/bin:$PATH"
 MPATH="$JFX_DIR/lib;$JFX_WIN_DIR"
+CP="$GSON_JAR;$OUT_DIR"
 exec java \
   -Dprism.order=sw \
   -Dprism.verbose=true \
@@ -67,4 +81,4 @@ exec java \
   -Djava.library.path="$JFX_DIR/bin" \
   --module-path "$MPATH" \
   --add-modules javafx.graphics,javafx.controls,javafx.fxml \
-  -cp "$OUT_DIR" com.quizmasterfx.Main
+  -cp "$CP" com.quizmasterfx.Main
