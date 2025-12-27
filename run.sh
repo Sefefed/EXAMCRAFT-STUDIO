@@ -74,11 +74,19 @@ curl -L -o "$JFX_WIN_DIR/javafx-fxml-$JFX_VER-win.jar"     "$BASE_MVN/javafx-fxm
 export PATH="$JFX_DIR/bin:$PATH"
 MPATH="$JFX_DIR/lib;$JFX_WIN_DIR"
 CP="$GSON_JAR;$OUT_DIR"
+# Convert POSIX (/c/...) paths to Windows-style (C:/...) when running under MSYS/Cygwin
+if command -v cygpath >/dev/null 2>&1; then
+  WIN_MPATH="$(cygpath -w "$JFX_DIR/lib")"";""$(cygpath -w "$JFX_WIN_DIR")"
+  WIN_CP="$(cygpath -w "$GSON_JAR")"";""$(cygpath -w "$OUT_DIR")"
+else
+  WIN_MPATH="$MPATH"
+  WIN_CP="$CP"
+fi
 exec java \
   -Dprism.order=sw \
   -Dprism.verbose=true \
   -Dglass.platform=Win \
   -Djava.library.path="$JFX_DIR/bin" \
-  --module-path "$MPATH" \
+  --module-path "$WIN_MPATH" \
   --add-modules javafx.graphics,javafx.controls,javafx.fxml \
-  -cp "$CP" com.quizmasterfx.Main
+  -cp "$WIN_CP" com.quizmasterfx.Main
