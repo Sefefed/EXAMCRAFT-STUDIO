@@ -1,0 +1,18 @@
+/* Simple dark theme override */
+.content,
+.sidebar,
+.topbar {
+  -fx-background-color: #0f172a;
+}
+Label,
+TableView,
+ListView,
+.title,
+.section,
+.question,
+.timer {
+  -fx-text-fill: #e2e8f0;
+}
+Button {
+  -fx-background-color: #3b82f6;
+}

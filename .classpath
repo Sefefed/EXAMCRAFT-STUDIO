@@ -53,6 +53,22 @@
 			<attribute name="version" value="2.27.0"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.4/bb2ea7217575af9de9b08e4574fa094b8b17655f/javafx-graphics-21.0.4-win.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.4/67f959474ae53c88a2b482ebc67f8bdb0f7d825d/javafx-graphics-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-graphics"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.4/3e682190fd50b172e8fc2709d04f71f4f937b9bf/javafx-base-21.0.4-win.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.4/18fd6a56249c960a3b7afc5b89f84dc6d95b3e44/javafx-base-21.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openjfx"/>
+			<attribute name="artifactId" value="javafx-base"/>
+			<attribute name="version" value="21.0.4"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/21.0.4/f95765a30335b7be0f383d4054c506c53604029e/javafx-fxml-21.0.4-win.jar" sourcepath="C:/Users/hp/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/21.0.4/72019e5ca6a68ed1f2c34bdc1c41cebdcd7ecc79/javafx-fxml-21.0.4-sources.jar">
 		<attributes>
 			<attribute name="gradle.buildServer" value="true"/>

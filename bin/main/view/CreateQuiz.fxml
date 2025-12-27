@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizmasterfx.controller.CreateQuizController">
+  <center>
+    <VBox spacing="8">
+      <padding>
+        <Insets top="12" right="12" bottom="12" left="12" />
+      </padding>
+      <HBox spacing="8">
+        <VBox spacing="6">
+          <Label text="Title"/>
+          <TextField fx:id="titleField" prefWidth="300"/>
+          <Label text="Password"/>
+          <PasswordField fx:id="passwordField"/>
+          <Label text="Time Limit (minutes)"/>
+          <TextField fx:id="timeLimitField"/>
+          <Label text="Description"/>
+          <TextArea fx:id="descriptionArea" prefRowCount="3"/>
+        </VBox>
+        <VBox spacing="6">
+          <Label text="Question Text"/>
+          <TextArea fx:id="questionTextArea" prefRowCount="3"/>
+          <Label text="Type"/>
+          <ChoiceBox fx:id="typeChoice"/>
+          <GridPane hgap="6" vgap="6">
+            <Label text="Choice A" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="choiceA" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="correctA" text="Correct" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+            <Label text="Choice B" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="choiceB" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="correctB" text="Correct" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+            <Label text="Choice C" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="choiceC" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="correctC" text="Correct" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+
+            <Label text="Choice D" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="choiceD" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <CheckBox fx:id="correctD" text="Correct" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+          </GridPane>
+
+          <Label text="Short Answer (provide correct answer here for T/F or Short Answer)"/>
+          <TextField fx:id="shortAnswerField"/>
+
+          <HBox spacing="8">
+            <Button text="Add Question" onAction="#onAddQuestion"/>
+          </HBox>
+        </VBox>
+        <VBox spacing="6">
+          <Label text="Staged Questions"/>
+          <ListView fx:id="questionsListView" prefWidth="320" prefHeight="300"/>
+        </VBox>
+      </HBox>
+    </VBox>
+  </center>
+  <bottom>
+    <HBox spacing="8" alignment="CENTER_RIGHT">
+      <padding>
+        <Insets top="12" right="12" bottom="12" left="12" />
+      </padding>
+      <Button text="Cancel" onAction="#onCancel"/>
+      <Button text="Save Quiz" onAction="#onSaveQuiz"/>
+    </HBox>
+  </bottom>
+</BorderPane>

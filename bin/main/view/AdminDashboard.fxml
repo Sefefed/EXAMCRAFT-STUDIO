@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.quizmasterfx.controller.AdminController">
+    <left>
+        <VBox spacing="12" BorderPane.alignment="CENTER" styleClass="sidebar">
+            <children>
+                <Label text="👑 ADMIN PANEL" styleClass="title"/>
+                <Separator/>
+                <Label fx:id="quizCountLabel" text="Active Quizzes: 0" styleClass="section"/>
+                <ListView fx:id="activeQuizzesList" prefWidth="240" prefHeight="280"/>
+                <Button fx:id="createQuizBtn" text="🆕 Create New Quiz" maxWidth="Infinity"/>
+                <Separator/>
+                <Button fx:id="studentPortalBtn" text="🎓 Go to Student Portal" maxWidth="Infinity"/>
+                <Button fx:id="toggleThemeBtn" text="🌓 Toggle Theme" maxWidth="Infinity"/>
+            </children>
+            <padding><Insets top="16" right="12" bottom="16" left="12"/></padding>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="10" styleClass="content">
+            <children>
+                <Label text="📊 Recent Results" styleClass="section"/>
+                <TableView fx:id="resultsTable" prefHeight="620">
+                    <columns>
+                        <TableColumn fx:id="studentCol" text="Student" prefWidth="180"/>
+                        <TableColumn fx:id="quizCol" text="Quiz" prefWidth="220"/>
+                        <TableColumn fx:id="correctCol" text="Correct" prefWidth="90"/>
+                        <TableColumn fx:id="totalCol" text="Total" prefWidth="90"/>
+                        <TableColumn fx:id="timeCol" text="Time" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </children>
+            <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+        </VBox>
+    </center>
+</BorderPane>

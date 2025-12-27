@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.quizmasterfx.controller.StudentController">
+    <center>
+        <GridPane hgap="12" vgap="12" styleClass="content">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="35"/>
+                <ColumnConstraints percentWidth="65"/>
+            </columnConstraints>
+            <children>
+                <Label text="QUIZ PORTAL - STUDENT" GridPane.columnSpan="2" styleClass="title"/>
+                <Label text="Enter Quiz Password:" GridPane.rowIndex="1"/>
+                <PasswordField fx:id="passwordField" promptText="Password" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Your Name:" GridPane.rowIndex="2"/>
+                <TextField fx:id="nameField" promptText="Full name" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="Student ID:" GridPane.rowIndex="3"/>
+                <TextField fx:id="idField" promptText="Optional" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                    <children>
+                        <Button fx:id="accessBtn" text="Access Quiz"/>
+                        <Button fx:id="backBtn" text="Back"/>
+                    </children>
+                </HBox>
+                <Label fx:id="statusLabel" textFill="red" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <VBox spacing="6" GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                    <children>
+                        <Label text="Available Quizzes:" styleClass="section"/>
+                        <ListView fx:id="availableList" prefHeight="220"/>
+                    </children>
+                </VBox>
+            </children>
+            <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+        </GridPane>
+    </center>
+</BorderPane>

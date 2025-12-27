@@ -7,7 +7,6 @@ import com.quizmasterfx.model.QuestionType;
 import com.quizmasterfx.model.Quiz;
 import com.quizmasterfx.utils.DialogHelper;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -51,7 +50,6 @@ public class CreateQuizController {
 
     private void updateFieldsForType(QuestionType type) {
         boolean mc = type == QuestionType.MULTIPLE_CHOICE;
-        boolean tf = type == QuestionType.TRUE_FALSE;
         boolean sa = type == QuestionType.SHORT_ANSWER;
         choiceA.setDisable(!mc); choiceB.setDisable(!mc); choiceC.setDisable(!mc); choiceD.setDisable(!mc);
         correctA.setDisable(!mc); correctB.setDisable(!mc); correctC.setDisable(!mc); correctD.setDisable(!mc);

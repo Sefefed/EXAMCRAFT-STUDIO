@@ -18,6 +18,14 @@ dependencies {
     // JavaFX (Windows classifiers). If on Mac/Linux, change ':win' to ':mac' or ':linux'.
     implementation "org.openjfx:javafx-controls:21.0.4:win"
     implementation "org.openjfx:javafx-fxml:21.0.4:win"
+    // Ensure core JavaFX modules are available on the compile classpath for IDEs
+    implementation "org.openjfx:javafx-base:21.0.4:win"
+    implementation "org.openjfx:javafx-graphics:21.0.4:win"
+    // Explicitly add base and graphics so IDEs that don't resolve transitive
+    // JavaFX modules still find core types like javafx.scene.Node and javafx.collections
+    implementation "org.openjfx:javafx-base:21.0.4:win"
+    implementation "org.openjfx:javafx-graphics:21.0.4:win"
+    implementation "org.openjfx:javafx-base:21.0.4:win" // provides javafx.collections
 
     // JSON (optional persistence)
     implementation 'com.google.code.gson:gson:2.11.0'
