@@ -1,7 +1,9 @@
 package com.quizmasterfx;
 
 /*
-javac -d out --module-path "C:/java/javafx-sdk-17.0.17/lib" --add-modules javafx.controls,javafx.fxml @out/sources.txt && java --module-path "C:/java/javafx-sdk-17.0.17/lib" --add-modules javafx.controls,javafx.fxml -Djava.library.path="C:/java/javafx-sdk-17.0.17/bin" -cp out com.quizmasterfx.Main
+javac -cp ./.javafx/libs/gson-2.10.1.jar -d out --module-path "C:/java/javafx-sdk-17.0.17/lib" --add-modules javafx.controls,javafx.fxml @out/sources.txt && java --module-path "C:/java/javafx-sdk-17.0.17/lib;./.javafx/win-jars" --add-modules javafx.graphics,javafx.controls,javafx.fxml -Djava.library.path="C:/java/javafx-sdk-17.0.17/bin" -cp "./.javafx/libs/gson-2.10.1.jar;out" com.quizmasterfx.Main
+
+bash quick-run.sh
  */
 
 import com.quizmasterfx.utils.StyleManager;

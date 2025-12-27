@@ -1,0 +1,16 @@
+# Build outputs
+out/
+
+# Local JavaFX SDK and downloaded libs
+.javafx/
+
+# IDE metadata
+.metadata/
+.vscode/
+*.iml
+
+# Compiled classes
+*.class
+
+# Local data
+quizzes.json
