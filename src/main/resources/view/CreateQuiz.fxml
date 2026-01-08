@@ -2,14 +2,23 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizmasterfx.controller.CreateQuizController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizmasterfx.controller.CreateQuizController" styleClass="root">
+  <top>
+    <HBox spacing="12" styleClass="header">
+      <children>
+        <Label text="Create Quiz" styleClass="title"/>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="helpBtn" text="❔"/>
+      </children>
+    </HBox>
+  </top>
   <center>
-    <VBox spacing="8">
+    <VBox spacing="8" styleClass="container">
       <padding>
         <Insets top="12" right="12" bottom="12" left="12" />
       </padding>
-      <HBox spacing="8">
-        <VBox spacing="6">
+      <HBox spacing="12">
+        <VBox spacing="8" styleClass="card">
           <Label text="Title"/>
           <TextField fx:id="titleField" prefWidth="300"/>
           <Label text="Password"/>
@@ -19,7 +28,7 @@
           <Label text="Description"/>
           <TextArea fx:id="descriptionArea" prefRowCount="3"/>
         </VBox>
-        <VBox spacing="6">
+        <VBox spacing="8" styleClass="card">
           <Label text="Question Text"/>
           <TextArea fx:id="questionTextArea" prefRowCount="3"/>
           <Label text="Type"/>
@@ -46,10 +55,10 @@
           <TextField fx:id="shortAnswerField"/>
 
           <HBox spacing="8">
-            <Button text="Add Question" onAction="#onAddQuestion"/>
+            <Button text="Add Question" onAction="#onAddQuestion" styleClass="primary"/>
           </HBox>
         </VBox>
-        <VBox spacing="6">
+        <VBox spacing="8" styleClass="card">
           <Label text="Staged Questions"/>
           <ListView fx:id="questionsListView" prefWidth="320" prefHeight="300"/>
         </VBox>
@@ -61,8 +70,8 @@
       <padding>
         <Insets top="12" right="12" bottom="12" left="12" />
       </padding>
-      <Button text="Cancel" onAction="#onCancel"/>
-      <Button text="Save Quiz" onAction="#onSaveQuiz"/>
+      <Button text="Cancel" onAction="#onCancel" styleClass="ghost"/>
+      <Button text="Save Quiz" onAction="#onSaveQuiz" styleClass="primary"/>
     </HBox>
   </bottom>
 </BorderPane>

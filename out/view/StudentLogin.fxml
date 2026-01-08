@@ -16,7 +16,7 @@
                 <Label text="Your Name:" GridPane.rowIndex="2"/>
                 <TextField fx:id="nameField" promptText="Full name" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
                 <Label text="Student ID:" GridPane.rowIndex="3"/>
-                <TextField fx:id="idField" promptText="required" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <TextField fx:id="idField" promptText="Optional" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
                 <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
                     <children>
                         <Button fx:id="accessBtn" text="Access Quiz"/>

@@ -28,7 +28,7 @@
                     <children>
                         <Button fx:id="prevBtn" text="← Prev"/>
                         <Button fx:id="flagBtn" text="Flag 🚩" disable="true"/>
-                        <Button fx:id="nextBtn" text="Next →"/>
+                        <Button fx:id="nextBtn" text="Next"/>
                     </children>
                 </HBox>
                 <TitledPane text="Questions" expanded="true">

@@ -1,18 +1,43 @@
-/* Simple dark theme override */
-.content,
-.sidebar,
-.topbar {
-  -fx-background-color: #0f172a;
+/* Dark theme overrides */
+
+.root {
+  -fx-background-color: linear-gradient(to bottom right, #071020, #081428);
+  -fx-font-family: "Segoe UI", Roboto, Arial;
 }
+
+.sidebar {
+  -fx-background-color: linear-gradient(to bottom, #071428, #0b1624);
+  -fx-border-color: rgba(255, 255, 255, 0.04);
+}
+
+.container,
+.content,
+.card {
+  -fx-background-color: #081428;
+}
+
 Label,
-TableView,
-ListView,
 .title,
 .section,
 .question,
 .timer {
-  -fx-text-fill: #e2e8f0;
+  -fx-text-fill: #e6eef8;
 }
-Button {
-  -fx-background-color: #3b82f6;
+
+.button.primary {
+  -fx-background-color: linear-gradient(#3b82f6, #2563eb);
+  -fx-text-fill: white;
+}
+.button.ghost {
+  -fx-text-fill: #cfe3ff;
+  -fx-border-color: rgba(255, 255, 255, 0.06);
+}
+
+.card {
+  -fx-background-color: #071428;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 18, 0, 0, 8);
+}
+
+.empty-placeholder {
+  -fx-text-fill: rgba(230, 238, 248, 0.28);
 }

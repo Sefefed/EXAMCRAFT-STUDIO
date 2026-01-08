@@ -1,53 +1,102 @@
-/* Base theme */
-.title {
-  -fx-font-size: 20px;
-  -fx-font-weight: bold;
+/* Modern UI theme - global styles */
+
+/* Font and background */
+.root {
+  -fx-font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -fx-base: #f6f8fb;
+  -fx-background-color: linear-gradient(to bottom right, #f7f9ff, #f3f6ff);
 }
 
-.bigscore {
-  -fx-font-size: 28px;
-  -fx-font-weight: 800;
+/* Header */
+.header {
+  -fx-padding: 16 20 16 20;
+  -fx-alignment: center-left;
+}
+.title {
+  -fx-font-size: 20px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #0f172a;
+}
+
+/* Sidebar */
+.sidebar {
+  -fx-background-color: linear-gradient(to bottom, #ffffff, #f5f8ff);
+  -fx-padding: 18 14 18 14;
+  -fx-pref-width: 260px;
+  -fx-background-radius: 12;
+  -fx-border-width: 0 1 0 0;
+  -fx-border-color: rgba(15,23,42,0.06);
+  -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.06), 12, 0, 0, 4);
+}
+
+/* Content container and cards */
+.container {
+  -fx-padding: 18 20 18 20;
+}
+.card {
+  -fx-background-color: white;
+  -fx-background-radius: 12;
+  -fx-padding: 14;
+  -fx-effect: dropshadow(gaussian, rgba(2,6,23,0.06), 16, 0, 0, 6);
 }
 
 .section {
   -fx-font-size: 14px;
-  -fx-font-weight: bold;
-}
-
-.sidebar {
-  -fx-background-color: linear-gradient(to bottom, #f8f9fb, #eef1f6);
-  -fx-border-width: 0 1 0 0;
-  -fx-border-color: #dcdfe4;
-}
-
-.content {
-  -fx-background-color: white;
-}
-
-.topbar {
-  -fx-background-color: linear-gradient(to right, #ffffff, #f3f7ff);
-  -fx-border-width: 0 0 1 0;
-  -fx-border-color: #e5e8ef;
+  -fx-font-weight: 600;
+  -fx-text-fill: #0f172a;
 }
 
 .question {
   -fx-font-size: 18px;
+  -fx-text-fill: #0f172a;
 }
-
 .timer {
   -fx-font-size: 16px;
-  -fx-font-weight: bold;
+  -fx-font-weight: 700;
 }
 
-/* Buttons */
-Button {
-  -fx-background-color: #2363eb;
+/* Buttons - primary and ghost */
+.button.primary {
+  -fx-background-color: linear-gradient(#326df6, #2359d6);
   -fx-text-fill: white;
-  -fx-background-radius: 6;
+  -fx-background-radius: 8;
+  -fx-padding: 8 14 8 14;
+  -fx-font-weight: 600;
 }
-Button:hover {
-  -fx-background-color: #1f55c8;
+.button.primary:hover {
+  -fx-background-color: linear-gradient(#2359d6, #1b46b3);
 }
-Button:disabled {
-  -fx-opacity: 0.6;
+.button.ghost {
+  -fx-background-color: transparent;
+  -fx-border-color: rgba(15,23,42,0.08);
+  -fx-text-fill: #0f172a;
+  -fx-background-radius: 8;
+  -fx-border-radius: 8;
+  -fx-padding: 6 12 6 12;
+}
+
+/* List & Table styling */
+ListView {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}
+TableView {
+  -fx-background-color: transparent;
+  -fx-background-insets: 0;
+}
+TableView .column-header-background {
+  -fx-background-color: transparent;
+}
+
+/* Misc */
+.bigscore { -fx-font-size: 28px; -fx-font-weight: 800; }
+
+/* Subtle transitions */
+.button {
+  -fx-cursor: hand;
+  -fx-transition: background-color 150ms ease-in-out;
+}
+
+.empty-placeholder {
+  -fx-text-fill: rgba(15,23,42,0.45);
 }
